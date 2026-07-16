@@ -1,0 +1,11 @@
+# Environments
+.venv/
+__pycache__/
+
+# Weights
+llama3-math-tutor-adapter/
+llama3-math-tutor-adapter-v2/
+
+# Data
+# Excluding all generated data initially except tracked
+data/generated/
