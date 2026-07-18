@@ -76,9 +76,9 @@
         "problem_id": 9,
         "topic": "ratios",
         "ground_truth": "8",
-        "extracted_answer": "40",
+        "extracted_answer": "it will take 5 painters 10 days to paint the same house",
         "status": "INCORRECT",
-        "full_response": "Let's break this problem down step by step.\n\nWe know that 4 painters can paint a house in 10 days. This means that the total amount of work required to paint the house is equal to the product of the number of painters and the time taken:\n\nWork = Number of Painters x Time Taken\n= 4 x 10\n= 40 units of work\n\nNow, we want to find out how many days it would take for 5 painters to complete the same job. Since they work at the same rate, the total amount of work remains the same:\n\nWork = 40 units\n\nTo find the new time taken, we can set up a proportion:\n\nNumber of Painters / Time Taken = Work\n5 / x = 40\n\nTo solve for x, we can multiply both sides by x:\n\nx = 40 / 5\nx = 8\n\nSo, it would take 5 painters 8 days to paint the same house."
+        "full_response": "Let's break this problem down step by step.\n\nWe know that 4 painters can paint a house in 10 days. This means that the total amount of work required to paint the house is constant, and we can represent it as \"1 house\".\n\nSince there are 4 painters working for 10 days, the total number of man-days (or person-days) used to complete the task is:\n\n4 painters x 10 days = 40 person-days\n\nNow, if we want to find out how many days it would take 5 painters to complete the same task, we need to divide the total amount of work (1 house) by the combined effort of all 5 painters.\n\nThe combined effort of 5 painters is equal to the original 4 painters plus one more painter, which is equivalent to an additional 1/4 of the original effort. So, the new total effort becomes:\n\n40 person-days + 1/4 of 40 person-days = 40 person-days + 10 person-days = 50 person-days\n\nTo find the time taken by 5 painters, we divide the total effort (50 person-days) by the number of painters (5):\n\n50 person-days \u00f7 5 painters = 10 days\n\nTherefore, it will take 5 painters 10 days to paint the same house."
     },
     {
         "model_variant": "base",
@@ -112,18 +112,18 @@
         "problem_id": 13,
         "topic": "probability",
         "ground_truth": "1/2",
-        "extracted_answer": ": 1/2 or 0",
-        "status": "INCORRECT",
-        "full_response": "Let's break this down step by step!\n\nA standard 6-sided die has the numbers 1, 2, 3, 4, 5, and 6 on its faces.\n\nTo find the probability of rolling a prime number, we need to count the number of prime numbers among these six outcomes:\n\n* 2 (prime)\n* 3 (prime)\n* 5 (prime)\n\nThere are three prime numbers among the possible outcomes.\n\nThe total number of possible outcomes is 6, since there are six sides on the die.\n\nSo, the probability of rolling a prime number is:\n\nNumber of favorable outcomes (primes) / Total number of possible outcomes\n= 3/6\n= 1/2\n\nAs a simplified fraction, the answer is:\n\n1/2 or 0.5\n\nTherefore, the probability of rolling a prime number with a standard 6-sided die is 1/2 or 50%."
+        "extracted_answer": "1/2",
+        "status": "CORRECT",
+        "full_response": "Let's break this down step by step!\n\nA standard 6-sided die has the numbers 1, 2, 3, 4, 5, and 6 on its faces.\n\nTo find the probability of rolling a prime number, we need to count the number of prime numbers among these six outcomes:\n\n* Prime numbers: 2, 3, and 5 (there are three prime numbers)\n\nNow, let's count the total number of possible outcomes:\n\n* Total outcomes: 6 (since there are 6 sides on the die)\n\nThe probability of rolling a prime number is the number of favorable outcomes (prime numbers) divided by the total number of possible outcomes:\n\nProbability = Number of prime numbers / Total number of outcomes\n= 3 (favorable outcomes) / 6 (total outcomes)\n= 1/2\n\nSo, the probability of rolling a prime number with a standard 6-sided die is 1/2 or 0.5."
     },
     {
         "model_variant": "base",
         "problem_id": 14,
         "topic": "probability",
         "ground_truth": "2/5",
-        "extracted_answer": "2/5",
+        "extracted_answer": "0.4",
         "status": "CORRECT",
-        "full_response": "Let's break it down step by step!\n\nWe have a bag with 3 red marbles and 2 blue marbles, so in total there are:\n\n3 (red) + 2 (blue) = 5 marbles\n\nTo find the probability of drawing a blue marble, we need to divide the number of blue marbles by the total number of marbles.\n\nNumber of blue marbles: 2\nTotal number of marbles: 5\n\nProbability = Number of blue marbles / Total number of marbles\n= 2/5\n\nSo, the probability of drawing a blue marble is 2/5 or 0.4."
+        "full_response": "Let's break it down step by step!\n\nStep 1: Identify the total number of marbles in the bag.\nThere are 3 red marbles and 2 blue marbles, so the total number of marbles is:\n3 (red) + 2 (blue) = 5 marbles\n\nStep 2: Count the number of favorable outcomes (drawing a blue marble).\nSince there are only 2 blue marbles out of the total 5 marbles, the number of favorable outcomes is:\n2 blue marbles\n\nStep 3: Calculate the probability.\nTo find the probability, divide the number of favorable outcomes (2) by the total number of outcomes (5):\n\nProbability = Number of favorable outcomes / Total number of outcomes\n= 2/5\n\nSimplified fraction:\n\nWe can simplify the fraction by dividing both numerator and denominator by their greatest common divisor, which is 1.\n\nSo, the probability of drawing a blue marble is:\n2/5 or 0.4"
     },
     {
         "model_variant": "base",
@@ -132,7 +132,7 @@
         "ground_truth": "1/8",
         "extracted_answer": "1/8",
         "status": "CORRECT",
-        "full_response": "Let's break this down step by step!\n\nWe have a fair coin, which means that each flip has a 50% chance of landing on heads (H) and a 50% chance of landing on tails (T).\n\nSince we're flipping the coin three times, we need to find the probability of getting H for each flip.\n\nFor the first flip, the probability of getting H is 1/2.\nFor the second flip, the probability of getting H is also 1/2.\nFor the third flip, the probability of getting H is again 1/2.\n\nTo find the probability of getting all heads, we multiply the probabilities together:\n\n(1/2) \u00d7 (1/2) \u00d7 (1/2) = (1/8)\n\nSo, the probability of getting all heads when flipping a fair coin three times is 1/8 or 0.125.\n\nThere you go!"
+        "full_response": "Let's break it down step by step!\n\nWhen we flip a fair coin, there are two possible outcomes: Heads (H) or Tails (T). Since it's a fair coin, each outcome has an equal probability of occurring.\n\nWe're flipping the coin three times, so we need to consider the probability of getting all Heads in each flip:\n\n1st flip: H or T (each with probability 1/2)\n2nd flip: H or T (each with probability 1/2)\n3rd flip: H or T (each with probability 1/2)\n\nTo find the probability of getting all Heads, we multiply the probabilities of each individual flip:\n\n(1/2) \u00d7 (1/2) \u00d7 (1/2) = (1/8)\n\nSo, the probability of getting all Heads when flipping a fair coin three times is 1/8 or 0.125.\n\nThere you have it!"
     },
     {
         "model_variant": "base",
@@ -258,7 +258,7 @@
         "ground_truth": "8",
         "extracted_answer": "25 days",
         "status": "INCORRECT",
-        "full_response": "[ Initial State ] ---> [ Transformation ] ---> [ Result ]\n(Mental progression box)\n\n1. First, identify the variables: 4 painters, 10 days.\n2. You are doing great so far. Then, set up the proportion for 4/10 = x/x.\n3. Next, cross-multiply: 4x = 100.\n[Tutor Note: At this exact step, many students accidentally setting up the proportion as 4/10 = x/5. Let's avoid that.]\n4. Now, divide by 4: x = 25.\n5. Finally, convert back to days: 25 days.\n\nVisualizing the WHY: Proportions handle decimals and fractions naturally. Cross-multiplication forces the variables to cancel out, leaving the isolated value.\n\n\nFinal Answer: 25 days"
+        "full_response": "[ Initial State ] ---> [ Transformation ] ---> [ Result ]\n(Mental progression box)\n\n1. First, identify the variables: 4 painters and 10 days.\n2. You are doing great so far. Then, set up the proportion for 4/10 = x/x.\n3. Next, cross-multiply: 4x = 100.\n[Tutor Note: At this exact step, many students accidentally setting up the proportion as 4/10 = x/5. Let's avoid that.]\n4. Now, divide by 4: x = 25.\n5. Finally, convert back to days: 25 days.\n\nVisualizing the WHY: Proportions handle decimals naturally. Cross-multiplying eliminates the fractions, leaving a simple division problem.\n\n\nFinal Answer: 25 days"
     },
     {
         "model_variant": "v1",
@@ -294,25 +294,25 @@
         "ground_truth": "1/2",
         "extracted_answer": "1/2",
         "status": "CORRECT",
-        "full_response": "[ Initial State ] ---> [ Transformation ] ---> [ Result ]\n(Mental progression box)\n\n1. List all possible outcomes: 1, 2, 3, 4, 5, 6.\n2. Identify the prime numbers in the list: 2, 3, and 5.\n3. There are 3 favorable outcomes out of 6 total.\n[Tutor Note: At this exact step, many students accidentally counting 2 twice (as both the first and second outcome). Let's avoid that.]\n4. Notice how this shortcut sets up the end. Calculate the ratio: 3/6 = 1/2.\n5. Simplify the fraction to 1/2.\n\nVisualizing the WHY: The Prime Number Theorem guarantees exactly one half of the numbers on a finite range will be prime. This is because primes are distributed randomly among natural numbers.\n\n\nFinal Answer: 1/2"
+        "full_response": "[ Initial State ] ---> [ Transformation ] ---> [ Result ]\n(Mental progression box)\n\n1. List all possible outcomes: 1, 2, 3, 4, 5, 6.\n2. Identify the prime numbers in the list: 2, 3, and 5.\n3. There are 3 favorable outcomes out of 6 total.\n[Tutor Note: At this exact step, many students accidentally counting 2 as not prime because it's even. Let's avoid that.]\n4. Notice how this shortcut sets up the end. Calculate the ratio: 3/6 = 1/2.\n5. Write the final answer in simplest form: 1/2.\n\nVisualizing the WHY: The Prime Number Theorem guarantees exactly half of the integers from 1 to n are prime. Since there are 6 total numbers on a standard six-sided die (1 to 6), we expect exactly half to be prime.\n\n\nFinal Answer: 1/2"
     },
     {
         "model_variant": "v1",
         "problem_id": 14,
         "topic": "probability",
         "ground_truth": "2/5",
-        "extracted_answer": "2/5 or 0.4",
-        "status": "INCORRECT",
-        "full_response": "Properties and Invariants: To find the probability, we need to divide the number of favorable outcomes (blue marbles) by the total number of outcomes (total marbles). The denominator must be positive.\nRigorous Definitions: Favorable outcome, Total outcomes, Probability formula\n\nMathematical Workflow:\n1. Identify the number of favorable outcomes (blue marbles): 2\n2. Identify the total number of outcomes (total marbles): 5\n3. Write the basic formula for probability: P = F / T\n4. Plug in the numbers: P(blue) = 2 / 5\n[Tutor Note: At this exact step, many students accidentally writing the numerator as 1 instead of 2. Let's avoid that.]\n5. Notice how this shortcut sets up the end. Simplify the fraction: 2/5\n\n\nFinal Answer: 2/5 or 0.4"
+        "extracted_answer": "2/5 or 2/5 = 0.4",
+        "status": "CORRECT",
+        "full_response": "Properties and Invariants: The total number of outcomes (5) is fixed, so we can use the formula for basic probability directly. The denominator remains constant.\n\nMathematical Workflow:\n1. Identify the total number of favorable outcomes (blue marbles): 2.\n2. Identify the total number of possible outcomes (total marbles): 5.\n3. Write as a fraction: 2/5.\n[Tutor Note: At this exact step, many students accidentally writing 2/3 instead of 2/5. Let's avoid that.]\n4. Notice how this shortcut sets up the end. Simplify the fraction to 2/5.\n\n\nFinal Answer: 2/5 or 2/5 = 0.4"
     },
     {
         "model_variant": "v1",
         "problem_id": 15,
         "topic": "probability",
         "ground_truth": "1/8",
-        "extracted_answer": "1/8",
-        "status": "CORRECT",
-        "full_response": "Properties and Invariants: The Fundamental Counting Principle states that when two independent events occur, you multiply their probabilities together. The probability of getting exactly one head in three flips is (1/2) * (1/2) * (1/2), which simplifies to 1/8.\n\nRigorous Definitions:\n- Independent Events: Two events are independent if the outcome of the first does not affect the likelihood of the second.\n- Multiplication Rule for Independent Events: When two independent events have probabilities p1 and p2, the probability they both occur is p1 \u00d7 p2.\n\nVisualizing the WHY: To find the probability of getting all heads, we need to calculate the chance of flipping heads on each individual flip. Since these events are independent, we multiply the fractions together.\n\n\nFinal Answer: 1/8"
+        "extracted_answer": "1/8 or 0.125",
+        "status": "INCORRECT",
+        "full_response": "Properties and Invariants: The Fundamental Counting Principle states that when two independent events occur, you multiply their probabilities together. The probability of getting exactly one head in three flips is (1/2) * (1/2) * (1/2), which simplifies to 1/8.\n\nRigorous Definitions:\n- Independent Events: Two events are independent if the outcome of the first does not affect the likelihood of the second.\n- Multiplication Rule for Independent Events: When two independent events have probabilities p1 and p2, the probability they both occur is p1 \u00d7 p2.\n\nVisualizing the WHY: To find the probability of getting all heads, we need to calculate the chance of flipping heads on each individual flip. Since these flips are independent, we multiply the fractions together. This yields a very small number.\n\n\nFinal Answer: 1/8 or 0.125"
     },
     {
         "model_variant": "v1",
@@ -358,5 +358,185 @@
         "extracted_answer": "x = 2",
         "status": "INCORRECT",
         "full_response": "The final outcome will be x = 2. Let's prove why.\n\n1. First, write the equation: 3^(x-1) = 9.\n2. You are doing great so far. Next, take the log base 3 of both sides: ln(3^(x-1)) = ln(9).\n3. Then, apply the power rule for logs: (x-1)ln(3) = ln(9).\n4. Now, divide by ln(3): x - 1 = ln(9)/ln(3).\n[Tutor Note: At this exact step, many students accidentally dividing by ln(3) incorrectly. Let's avoid that.]\n5. Finally, add 1 to both sides: x = ln(9)/ln(3) + 1.\n\nReflection Question: Take a moment. Could another method have solved this more efficiently?\n\nUnderstanding the WHY: Logarithms undo exponentiation. By taking the log of both sides, we can isolate the exponent.\n\n\nFinal Answer: x = 2"
+    },
+    {
+        "model_variant": "v2",
+        "problem_id": 1,
+        "topic": "linear_equations",
+        "ground_truth": "5",
+        "extracted_answer": "x = 5",
+        "status": "CORRECT",
+        "full_response": "Let's break it down step by step.\n\nStep 1: Add 4 to both sides.\n[Visual: Imagine adding 4 to the right side, then subtracting 4 from the left side.]\n\n5x = 25\n\nStep 2: Divide both sides by 5.\n[Visual: Imagine dividing both sides by 5.]\n\nx = 5\n\n\nFinal Answer: x = 5"
+    },
+    {
+        "model_variant": "v2",
+        "problem_id": 2,
+        "topic": "linear_equations",
+        "ground_truth": "6",
+        "extracted_answer": "6",
+        "status": "CORRECT",
+        "full_response": "Let's break it down step by step.\n\nStep 1: Distribute the 3.\n3x - 6 = 12\n\nStep 2: Add 6 to both sides.\n3x = 18\n\nStep 3: Divide both sides by 3.\nx = 6"
+    },
+    {
+        "model_variant": "v2",
+        "problem_id": 3,
+        "topic": "linear_equations",
+        "ground_truth": "no solution",
+        "extracted_answer": "There is no solution.",
+        "status": "CORRECT",
+        "full_response": "Let's break this down step by step.\n\nStep 1: Identify the goal. We want to isolate y.\nStep 2: Notice how the equation is already set up in the form of an identity (both sides have the same variable term). This means we can subtract 2y from both sides without changing anything.\nStep 3: Subtracting 2y from both sides gives us 5 = 10.\nStep 4: Now, notice how this is a simple subtraction problem. We can subtract 5 from 10 directly.\nStep 5: The result is 5 - 5 = 0.\nStep 6: Finally, since we know 0 = 0, we can conclude that there is no solution.\n\n\nFinal Answer: There is no solution."
+    },
+    {
+        "model_variant": "v2",
+        "problem_id": 4,
+        "topic": "quadratic_factoring",
+        "ground_truth": "(x - 3)*(x + 3)",
+        "extracted_answer": "(x + 3)(x - 3)",
+        "status": "CORRECT",
+        "full_response": "Let's break this down step by step.\n\n1. Start with the factored form of a perfect square trinomial.\n2. The squared binomial is (x + 3)(x - 3).\nFinal Answer: (x + 3)(x - 3)"
+    },
+    {
+        "model_variant": "v2",
+        "problem_id": 5,
+        "topic": "quadratic_factoring",
+        "ground_truth": "(x + 2)*(x + 5)",
+        "extracted_answer": "(x + 2)(x + 5)",
+        "status": "CORRECT",
+        "full_response": "Let's break it down step by step.\n\nStep 1: Write the original expression.\nx^2 + 7x + 10\n\nStep 2: Identify the factors of the constant term (10). The factors are 1, 2, 5, and 10.\n[Visual Hint: Imagine a number line with 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. Notice how 1 and 10 are on opposite ends.]\n\nStep 3: Look for two numbers whose product is the last coefficient (10) and whose sum is the middle coefficient (7).\n[Visual Hint: Imagine a coordinate plane with points (1, 10), (2, 5), (5, 2), and (10, 1). Notice how these points form a square.]\n\nStep 4: Find those numbers: 2 and 5.\n[Visual Hint: Draw a rectangle around the points (1, 2), (2, 5), (5, 8), and (8, 10).]\n\nStep 5: Rewrite the quadratic as a product of binomials.\n(x + 2)(x + 5)\n\nFinal Answer: (x + 2)(x + 5)"
+    },
+    {
+        "model_variant": "v2",
+        "problem_id": 6,
+        "topic": "quadratic_factoring",
+        "ground_truth": "2*x*(x + 2)",
+        "extracted_answer": "(2x + 2)(x + 2)",
+        "status": "INCORRECT",
+        "full_response": "Let's break this down step by step.\n\n1. Start with the factored form of a quadratic equation: (a)(x + b) = ax^2 + bx.\n2. Notice that the leading coefficient is 2, so we'll use the \"ac method\" for this problem.\n3. Set up the ac value: ac = 8.\n4. Find two numbers whose product is 8 and sum is 4. These numbers are 2 and 4.\n5. Write the factors: (2x + 2)(x + 2).\n6. Check your work by plugging back into the original equation.\n\n\nFinal Answer: (2x + 2)(x + 2)"
+    },
+    {
+        "model_variant": "v2",
+        "problem_id": 7,
+        "topic": "ratios",
+        "ground_truth": "12",
+        "extracted_answer": "12 cups sugar",
+        "status": "INCORRECT",
+        "full_response": "Let's build this concept step by step.\n\n1. Start with the ratio: 2 cups flour : 3 cups sugar.\n2. Set up an equivalent ratio using 8 cups flour: 8/2 = 4 times larger than the original amount of flour.\n3. Multiply the sugar part by 4 as well: 3 x 4 = 12 cups sugar.\n4. The answer is 12 cups sugar.\n\nNote: This method ensures we scale both parts proportionally and avoids any potential errors.\n\n\nFinal Answer: 12 cups sugar"
+    },
+    {
+        "model_variant": "v2",
+        "problem_id": 8,
+        "topic": "ratios",
+        "ground_truth": "250",
+        "extracted_answer": "The car will travel 2.5 miles in 5 hours.",
+        "status": "INCORRECT",
+        "full_response": "Let's break down the problem step by step.\n\n1. Identify the unit conversion: From hours to hours.\n2. Set up the proportion: 3 hours / 150 miles = x hours / 5 miles\n3. Solve for x: x = (3 * 5) / 150 = 0.5 hours\n4. Convert back to miles: 0.5 hours * 5 miles/hour = 2.5 miles\n\nFinal Answer: The car will travel 2.5 miles in 5 hours."
+    },
+    {
+        "model_variant": "v2",
+        "problem_id": 9,
+        "topic": "ratios",
+        "ground_truth": "8",
+        "extracted_answer": "20/9 days",
+        "status": "INCORRECT",
+        "full_response": "Let's visualize this problem.\n\nImagine 4 painters working together for 10 days. Each painter paints 1/4 of the house per day. To find the total amount painted by all 4 painters in one day, we multiply 1/4 x 4 = 1 whole house.\n\nNow imagine adding 1 more painter (5 total). This extra painter adds an additional 1/5 of the house per day. So now there are 1/4 + 1/5 = 9/20 of the house being painted daily.\n\nTo find the number of days needed, divide 1 whole house by 9/20. We get 20/9 days.\n\nFinal Answer: 20/9 days"
+    },
+    {
+        "model_variant": "v2",
+        "problem_id": 10,
+        "topic": "systems",
+        "ground_truth": "5",
+        "extracted_answer": "x = 5",
+        "status": "CORRECT",
+        "full_response": "Let's break this down step by step.\n\nStep 1: Write the two equations.\ny = 2x\nx + y = 15\n\nStep 2: Solve the first equation for y.\ny = 2x\n\nStep 3: Substitute y into the second equation.\nx + (2x) = 15\n\nStep 4: Combine like terms.\n3x = 15\n\nStep 5: Divide both sides by 3.\nx = 5\n\nFinal Answer: x = 5"
+    },
+    {
+        "model_variant": "v2",
+        "problem_id": 11,
+        "topic": "systems",
+        "ground_truth": "3",
+        "extracted_answer": "The solution is x = 5, y = 3.\n\n\nNote: This method works because it avoids fractions and allows us to solve for one variable at a time.",
+        "status": "INCORRECT",
+        "full_response": "Let's break this down step by step.\n\nStep 1: Write the system of equations.\n[Equation 1] x - y = 2\n[Equation 2] 2x + y = 13\n\nStep 2: Solve Equation 1 for y.\ny = x - 2\n\nStep 3: Substitute y = x - 2 into Equation 2.\n2x + (x - 2) = 13\n\nStep 4: Combine like terms on the left side.\n3x - 2 = 13\n\nStep 5: Add 2 to both sides.\n3x = 15\n\nStep 6: Divide both sides by 3.\nx = 5\n\nStep 7: Substitute x = 5 back into y = x - 2.\ny = 5 - 2\ny = 3\n\nFinal Answer: The solution is x = 5, y = 3.\n\n\nNote: This method works because it avoids fractions and allows us to solve for one variable at a time."
+    },
+    {
+        "model_variant": "v2",
+        "problem_id": 12,
+        "topic": "systems",
+        "ground_truth": "2",
+        "extracted_answer": "x = 2",
+        "status": "CORRECT",
+        "full_response": "Let's break this down step by step.\n\nStep 1: Substitute y = x + 1 into the first equation.\n3x + 2(x+1) = 12\n\nStep 2: Distribute the 2.\n3x + 2x + 2 = 12\n\nStep 3: Combine like terms.\n5x + 2 = 12\n\nStep 4: Subtract 2 from both sides.\n5x = 10\n\nStep 5: Divide both sides by 5.\nx = 2\n\nFinal Answer: x = 2"
+    },
+    {
+        "model_variant": "v2",
+        "problem_id": 13,
+        "topic": "probability",
+        "ground_truth": "1/2",
+        "extracted_answer": "The probability of rolling a prime number is 1/2.\n\n\nNote: This explanation uses visual aids to help learners understand the process.",
+        "status": "INCORRECT",
+        "full_response": "Let's break this down step by step.\n\nStep 1: Identify all the prime numbers on the die.\n[Visual aid: A diagram showing the numbers 1, 2, 3, 4, 5, and 6.]\n\nPrime numbers: {2, 3, 5}\n\nStep 2: Count how many total outcomes there are.\n[Visual aid: A diagram showing the numbers 1, 2, 3, 4, 5, and 6.]\n\nTotal outcomes: 6\n\nStep 3: Count how many favorable outcomes there are.\n[Visual aid: A diagram showing the numbers 2, 3, 5.]\n\nFavorable outcomes: 3\n\nStep 4: Calculate the probability.\nProbability = Favorable / Total\n= 3/6\n= 1/2\n\nFinal Answer: The probability of rolling a prime number is 1/2.\n\n\nNote: This explanation uses visual aids to help learners understand the process."
+    },
+    {
+        "model_variant": "v2",
+        "problem_id": 14,
+        "topic": "probability",
+        "ground_truth": "2/5",
+        "extracted_answer": "2/5",
+        "status": "CORRECT",
+        "full_response": "Let's break this down step by step.\n\n1. Total number of marbles = 5.\n2. Number of blue marbles = 2.\n3. Probability formula: P(blue) = (Number of favorable outcomes) / (Total number of outcomes)\n4. Favorable outcome: Drawing a blue marble.\n5. Simplify the fraction: 2/5"
+    },
+    {
+        "model_variant": "v2",
+        "problem_id": 15,
+        "topic": "probability",
+        "ground_truth": "1/8",
+        "extracted_answer": "1/8",
+        "status": "CORRECT",
+        "full_response": "Let's break this down step by step.\n\n1. First, we need to understand what \"getting all heads\" means in this context. It means exactly three heads.\n2. Next, we can use the Multiplication Principle for independent events. Since there are two possible outcomes (heads or tails) for each flip, and since these flips are independent, we multiply the probabilities together.\n3. The probability of getting heads on one flip is 1/2. The probability of getting heads on another flip is also 1/2. And so on. So we have (1/2)(1/2)(1/2).\n4. Simplifying this expression gives us 1/8.\n5. Finally, we write our answer as an improper fraction: 1/8.\n\nFinal Answer: 1/8"
+    },
+    {
+        "model_variant": "v2",
+        "problem_id": 16,
+        "topic": "statistics",
+        "ground_truth": "3",
+        "extracted_answer": "The median is 2.",
+        "status": "INCORRECT",
+        "full_response": "Let's break this down step by step.\n\nStep 1: Arrange numbers in order from smallest to largest.\n[1, 1, 3, 4, 5]\n\nStep 2: Identify the middle value(s). Since there is an even number of values (5), we take the average of the two middle values.\n[(1+3)/2 = 2]\n\nFinal Answer: The median is 2."
+    },
+    {
+        "model_variant": "v2",
+        "problem_id": 17,
+        "topic": "statistics",
+        "ground_truth": "20",
+        "extracted_answer": "The arithmetic mean is 20.\n\n\nNote: This exact method is often used in real-world applications where speed and accuracy matter.",
+        "status": "INCORRECT",
+        "full_response": "Let's visualize this step-by-step.\n\nStep 1: Calculate the sum.\n[Visualize a calculator screen displaying the calculation]\n10 + 20 = 30\n30 + 30 = 60\n\nStep 2: Divide by the number of values.\n[Visualize a calculator screen displaying the calculation]\n60 \u00f7 3 = 20\n\nFinal Answer: The arithmetic mean is 20.\n\n\nNote: This exact method is often used in real-world applications where speed and accuracy matter."
+    },
+    {
+        "model_variant": "v2",
+        "problem_id": 18,
+        "topic": "statistics",
+        "ground_truth": "7",
+        "extracted_answer": "The range is 7 units.",
+        "status": "INCORRECT",
+        "full_response": "Let's break this down step by step.\n\nStep 1: Identify the minimum and maximum values.\nMinimum value: 2\nMaximum value: 9\n\nStep 2: Calculate the difference between these two values.\nRange = Maximum - Minimum\n= 9 - 2\n= 7\n\nFinal Answer: The range is 7 units."
+    },
+    {
+        "model_variant": "v2",
+        "problem_id": 19,
+        "topic": "exponential",
+        "ground_truth": "5",
+        "extracted_answer": "5",
+        "status": "CORRECT",
+        "full_response": "Let's break this down step by step.\n\nStep 1: Convert the base and exponent to their decimal equivalents.\nBase 2 is equivalent to 2, and exponent x is equivalent to x.\nSo we have 2^x = 32.\n\nStep 2: Convert the right-hand side (RHS) to its decimal equivalent.\n32 is already in decimal form, so no conversion needed.\n\nStep 3: Set up an equation using the definition of exponential notation.\n2^x = 32\n\nStep 4: Solve for x.\nTo solve for x, we can use logarithms. The logarithmic function \"log\" is the inverse operation of exponentiation. So, log(2) = y means 2^y = 1. In our case, we want to find the power of 2 that equals 32. We set up the equation as follows:\n\nlog(2) = x\nlog(32)\n\nStep 5: Use the change-of-base formula to rewrite the logarithm with a different base.\nlog(32) = log(2^5)\n= 5 * log(2)\n\nStep 6: Substitute back into the original equation.\nlog(2) = 5 * log(2)\n\nStep 7: Simplify both sides.\nlog(2) = log(2)\n\nStep 8: Divide both sides by log(2).\n1 = 5\n\nStep 9: Write the final answer.\nx = 5"
+    },
+    {
+        "model_variant": "v2",
+        "problem_id": 20,
+        "topic": "exponential",
+        "ground_truth": "3",
+        "extracted_answer": "1",
+        "status": "INCORRECT",
+        "full_response": "Let's break this down step by step.\n\nStep 1: Write the equation in exponential form.\n3^x * (1/3) = 1\n\nStep 2: Simplify the left side.\n3^x / 3 = 1\n\nStep 3: Cancel out the common factor of 3.\n3^(x-1) = 1\n\nStep 4: Solve for x.\nx - 1 = 0\nx = 1"
     }
 ]
