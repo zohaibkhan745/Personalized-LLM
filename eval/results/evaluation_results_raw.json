@@ -718,5 +718,185 @@
         "extracted_answer": "x = 3",
         "status": "CORRECT",
         "full_response": "Reflection Question: Before starting, take a quick mental note about the rules of exponents. When bases are equal, powers must be equal.\n\n1. Start with the equation: 3^(x-1) = 9.\n2. Notice how this shortcut sets up the end. First, identify the base (3).\n3. You are doing great so far. Then, identify the left side as exponential and right side as constant.\n4. Now, equate the powers directly: (x - 1) = 2.\n[Tutor Note: At this exact step, many students accidentally thinking they need to subtract 1 from 2 to get x. Let's avoid that.]\n5. Finally, solve for x: x = 3.\n\nReflection Question: After completing the problem, think back: Did using the matching power rule simplify the solution?\n\n\nFinal Answer: x = 3"
+    },
+    {
+        "model_variant": "v4",
+        "problem_id": 1,
+        "topic": "linear_equations",
+        "ground_truth": "5",
+        "extracted_answer": "x = 5",
+        "status": "CORRECT",
+        "full_response": "[ Left Side ] === [ Right Side ]\n(Imagine maintaining the balance as we proceed)\n\n1. Start with the equation: 5x - 4 = 21.\n2. Add 4 to both sides: 5x - 4 + 4 = 21 + 4.\n3. Simplify the equation: 5x = 25.\n[Tutor Note: At this exact step, many students accidentally adding 4 to the right side incorrectly (making it 25 + 4). Let's avoid that.]\n4. Notice how this shortcut sets up the end. Divide by 5: 5x / 5 = 25 / 5.\n5. The final answer is x = 5.\n\nVisualizing the WHY: Adding 4 to both sides keeps the scale balanced. Then, dividing by 5 is safe because there is no common factor between 5x and 4.\n\n\nFinal Answer: x = 5"
+    },
+    {
+        "model_variant": "v4",
+        "problem_id": 2,
+        "topic": "linear_equations",
+        "ground_truth": "6",
+        "extracted_answer": "x = 4",
+        "status": "INCORRECT",
+        "full_response": "Mathematical Workflow:\n1. Substitute 4 into both sides: 3(4 - 2) = 12.\n2. Distribute the 3 on the left side: 3(2) = 6.\n3. Notice how this shortcut sets up the end. Simplify right side: 12 = 12.\n[Tutor Note: At this exact step, many students accidentally forgetting to distribute the negative sign when isolating the variable. Let's avoid that.]\n4. Check reasonableness: The solution is correct because plugging in x = 4 yields exactly 12 on both sides.\n\nProperties and Invariants: When substituting values back into the original equation, it should be true algebraically. This acts as a strong verification check.\n\n\nFinal Answer: x = 4"
+    },
+    {
+        "model_variant": "v4",
+        "problem_id": 3,
+        "topic": "linear_equations",
+        "ground_truth": "no solution",
+        "extracted_answer": "y = 0",
+        "status": "INCORRECT",
+        "full_response": "1. First, imagine a scale balancing 2 blocks (2y) and 5 units.\n2. You are doing great so far. Now, add 2 more blocks (2y) to the right side.\n3. The scale now balances 4 blocks (4y) and 5 units.\n[Tutor Note: At this exact step, many students accidentally thinking there is no solution because you can't remove 5 units from one side without changing the balance. Let's avoid that.]\n4. Next, remove 5 units from both sides to leave just the blocks.\n5. Finally, if 0 blocks balance 0 units, then y = 0.\n\nThe core 'Why': If adding 2x to both sides of an equation keeps it balanced, then removing x from both sides also keeps it balanced.\n\n\nFinal Answer: y = 0"
+    },
+    {
+        "model_variant": "v4",
+        "problem_id": 4,
+        "topic": "quadratic_factoring",
+        "ground_truth": "(x - 3)*(x + 3)",
+        "extracted_answer": "(x + 3)(x - 3)",
+        "status": "CORRECT",
+        "full_response": "1. First, imagine a rectangle with a length of x and width of x.\n2. You are doing great so far. Now, find the area (x\u00b2) and perimeter (2x + 18).\n3. Then, set up the equation for the area: x\u00b2 = (width)(length).\n4. Next, substitute the perimeter into the equation: x\u00b2 = (2x + 18)(x/2).\n[Tutor Note: At this exact step, many students accidentally setting up the equation as (2x+18)\u00b2 instead of just 2x. Let's avoid that.]\n5. Finally, distribute the right side: x\u00b2 = 2x(x/2) + 18x.\n6. Simplify the middle term: x\u00b2 = x\u00b2 + 18x.\n\nReflection Question: Take a moment. Could another method have solved this more efficiently?\n\nUnderstanding the WHY: The geometric model visually represents factoring over 1. The area formula guarantees one binomial will cancel out the other.\n\n\nFinal Answer: (x + 3)(x - 3)"
+    },
+    {
+        "model_variant": "v4",
+        "problem_id": 5,
+        "topic": "quadratic_factoring",
+        "ground_truth": "(x + 2)*(x + 5)",
+        "extracted_answer": "(x + 5)(x + 2)",
+        "status": "CORRECT",
+        "full_response": "[ Left Side ] === [ Right Side ]\n(Imagine maintaining the balance as we proceed)\n\n1. First, draw a 2x2 grid.\n2. Place x\u00b2 in top-left, 10 in bottom-right.\n3. You are doing great so far. Now, find numbers adding to 7 that multiply to 10.\n4. The numbers are 5 and 2.\n[Tutor Note: At this exact step, many students accidentally using positive 5 and 2, which would add to 7 but not multiply to 10. Let's avoid that.]\n5. Then, place 5 in top-right, 2 in bottom-left.\n6. Finally, read off the diagonal terms: (x + 5)(x + 2).\n\nVisualizing the WHY: The Box Method visually enforces the need for numbers on the edges to multiply to the corner value. It also guarantees the correct signs.\n\n\nFinal Answer: (x + 5)(x + 2)"
+    },
+    {
+        "model_variant": "v4",
+        "problem_id": 6,
+        "topic": "quadratic_factoring",
+        "ground_truth": "2*x*(x + 2)",
+        "extracted_answer": "(2x + 2)^2",
+        "status": "INCORRECT",
+        "full_response": "Mathematical Workflow:\n1. First, identify trinomial with a=2, b=4, c=0.\n2. You are doing great so far. Now, find numbers multiplying to 4x\u00b2 and adding to 4x.\n3. Then, factors of 4 are (1,4) or (2,2). Summing to 4x is only (2+2).\n4. Next, set up brackets: (2x + _)(2x + _).\n[Tutor Note: At this exact step, many students accidentally using (2x + 1)(2x + 2), which gives x\u00b2 + 2x + 2. Let's avoid that.]\n5. Finally, combine terms: (2x + 2)(2x + 2).\n\nProperties and Invariants: The constants in the binomials must add to the linear term 'b'. Since they multiply to 'c', they must both be perfect squares.\n\n\nFinal Answer: (2x + 2)^2"
+    },
+    {
+        "model_variant": "v4",
+        "problem_id": 7,
+        "topic": "ratios",
+        "ground_truth": "12",
+        "extracted_answer": "12 cups sugar",
+        "status": "INCORRECT",
+        "full_response": "1. First, set up the ratio: 2 cups flour / 3 cups sugar.\n2. You are doing great so far. Now, let x be the multiplier. Set up the new ratio: 8 cups flour / x cups sugar.\n3. Then, equate them: 2/3 = 8/x.\n[Tutor Note: At this exact step, many students accidentally setting up the proportion with 2 in the denominator (2x/3 = 8). Let's avoid that.]\n4. Next, cross-multiply: 2x = 24.\n5. Finally, solve for x: x = 12 cups sugar.\n\nThe core 'Why': Ratios maintain their shape when scaling. By ensuring the units match on the sides being compared, we can safely extract the missing value.\n\n\nFinal Answer: 12 cups sugar"
+    },
+    {
+        "model_variant": "v4",
+        "problem_id": 8,
+        "topic": "ratios",
+        "ground_truth": "250",
+        "extracted_answer": "250 miles",
+        "status": "INCORRECT",
+        "full_response": "1. Set up the complex fraction: (150 miles) / (3 hours).\n2. You are doing great so far. Convert time into hours: (5/1) hours.\n3. Multiply fractions: (150/3) * (5/1).\n[Tutor Note: At this exact step, many students accidentally multiplying 150 by 5 directly without dividing by 3 first. Let's avoid that.]\n4. Cancel 'hours' units.\n5. Simplify to 250 miles.\n\nReflection Question: Take a moment. Could another method have solved this more efficiently?\n\nUnderstanding the WHY: Unit cancellation forces you to extract the common unit of time from both numbers. The isolated number remaining is entirely distance.\n\n\nFinal Answer: 250 miles"
+    },
+    {
+        "model_variant": "v4",
+        "problem_id": 9,
+        "topic": "ratios",
+        "ground_truth": "8",
+        "extracted_answer": "13 days",
+        "status": "INCORRECT",
+        "full_response": "[ Initial State ] ---> [ Transformation ] ---> [ Result ]\n(Mental progression box)\n\n1. Set up the proportion: 4 painters / 10 days = 5 painters / x days.\n2. Cross-multiply: 4x = 50.\n3. Solve for x: x = 12.5 days.\n[Tutor Note: At this exact step, many students accidentally setting up the proportion with mismatched units (e.g., painters on one side and time on the other). Let's avoid that.]\n4. Notice how this shortcut sets up the end. Convert to mixed number: 12 days and 0.5 days.\n5. Since you can't work half a day, round up to 13 days.\n\nVisualizing the WHY: Algebraic proportions handle decimals naturally. The isolated variable provides the precise amount of time.\n\n\nFinal Answer: 13 days"
+    },
+    {
+        "model_variant": "v4",
+        "problem_id": 10,
+        "topic": "systems",
+        "ground_truth": "5",
+        "extracted_answer": "x = 5, y = 10",
+        "status": "INCORRECT",
+        "full_response": "Mathematical Workflow:\n1. Start with the system: y = 2x, x + y = 15.\n2. You are doing great so far. Solve the first equation for y: y = 2x.\n3. Substitute this into the second equation: x + (2x) = 15.\n4. Combine like terms: 3x = 15.\n[Tutor Note: At this exact step, many students accidentally setting up the substitution backwards (x + y = 15 -> y = x + 15). Let's avoid that.]\n5. Notice how this shortcut sets up the end. Divide by 3: x = 5.\n6. Substitute back into either original equation to verify: y = 2(5) = 10, x + y = 5 + 10 = 15.\n\nProperties and Invariants: This method relies on substitution, replacing one variable with another. The resulting single-variable equation is then easily solved.\n\n\nFinal Answer: x = 5, y = 10"
+    },
+    {
+        "model_variant": "v4",
+        "problem_id": 11,
+        "topic": "systems",
+        "ground_truth": "3",
+        "extracted_answer": "x = 5, y = 3",
+        "status": "CORRECT",
+        "full_response": "Visualizing the WHY: Because both equations contain the variables x and y, we can solve them simultaneously using substitution or elimination. Elimination is more efficient because it uses one equation directly.\n\n1. Start with the system: x - y = 2 and 2x + y = 13.\n2. You are doing great so far. Solve the first equation for y: y = x - 2.\n3. Substitute this expression into the second equation: 2x + (x - 2) = 13.\n4. Distribute the 2x: 3x - 2 = 13.\n[Tutor Note: At this exact step, many students accidentally forgetting to distribute the 2x when isolating y. Let's avoid that.]\n5. Add 2 to both sides: 3x = 15.\n6. Divide by 3: x = 5.\n7. Substitute back into y = x - 2: y = 5 - 2 = 3.\n\n\nFinal Answer: x = 5, y = 3"
+    },
+    {
+        "model_variant": "v4",
+        "problem_id": 12,
+        "topic": "systems",
+        "ground_truth": "2",
+        "extracted_answer": "x = 2, y = 3",
+        "status": "INCORRECT",
+        "full_response": "1. Start with the system: 3x + 2y = 12 and y = x + 1.\n2. You are doing great so far. Substitute y = x + 1 into the first equation: 3x + 2(x + 1) = 12.\n3. Distribute the 2: 3x + 2x + 2 = 12.\n4. Combine like terms: 5x + 2 = 12.\n[Tutor Note: At this exact step, many students accidentally forgetting to distribute the 2 when substituting y. Let's avoid that.]\n5. Subtract 2 from both sides: 5x = 10.\n6. Divide by 5: x = 2.\n7. Notice how this shortcut sets up the end. Substitute x = 2 into y = x + 1: y = 2 + 1 = 3.\n8. Solution: (2, 3).\n\nReflection Question: Take a moment. Could another method have solved this more efficiently?\n\nUnderstanding the WHY: Substitution is perfect for systems where one equation is already isolated. We replace y in the other equation with x + 1, then solve.\n\n\nFinal Answer: x = 2, y = 3"
+    },
+    {
+        "model_variant": "v4",
+        "problem_id": 13,
+        "topic": "probability",
+        "ground_truth": "1/2",
+        "extracted_answer": "1/2",
+        "status": "CORRECT",
+        "full_response": "[ Initial State ] ---> [ Transformation ] ---> [ Result ]\n(Mental progression box)\n\n1. List all outcomes: (1,2,3,4,5,6)\n2. Identify primes: 2, 3, 5\n3. You are doing great so far. Count the favorable outcomes: 3\n4. Total outcomes = 6\n[Tutor Note: At this exact step, many students accidentally counting 2 as composite instead of prime. Let's avoid that.]\n5. Calculate probability: 3/6 = 1/2\n6. Simplify to 1/2 or 0.5\n\nVisualizing the WHY: Prime numbers are isolated on the number line. The total space is divided into halves by the prime lines.\nKey Ideas to connect: Prime numbers, Number line\n\n\nFinal Answer: 1/2"
+    },
+    {
+        "model_variant": "v4",
+        "problem_id": 14,
+        "topic": "probability",
+        "ground_truth": "2/5",
+        "extracted_answer": "2/5",
+        "status": "CORRECT",
+        "full_response": "Mathematical Workflow:\n1. Identify total number of balls (5) and favorable outcomes (2).\n2. You are doing great so far. Set up ratio: 2/5.\n3. Simplify by finding GCD for 2 and 5, which is 1.\n4. Result: 2/5 or 2/5.\n\nProperties and Invariants: The algebraic setup guarantees the denominator will cancel out any common factors between the numbers. This leaves only the prime factors.\n\n\nFinal Answer: 2/5"
+    },
+    {
+        "model_variant": "v4",
+        "problem_id": 15,
+        "topic": "probability",
+        "ground_truth": "1/8",
+        "extracted_answer": "1/8",
+        "status": "CORRECT",
+        "full_response": "Understanding the WHY: The formula for independent events is (Number of favorable outcomes) / (Total number of possible outcomes). Since there's only one way to get three heads, we use it directly.\n\n1. Identify the event: All heads.\n2. Calculate total outcomes: 2^3 = 8.\n3. Count favorable outcomes: One sequence: HHH.\n4. Set up ratio: 1/8.\n[Tutor Note: At this exact step, many students accidentally calculating total outcomes as 6 (ignoring the order of tails). Let's avoid that.]\n5. Simplify fraction: 1/8.\n\n\nFinal Answer: 1/8"
+    },
+    {
+        "model_variant": "v4",
+        "problem_id": 16,
+        "topic": "statistics",
+        "ground_truth": "3",
+        "extracted_answer": "3",
+        "status": "CORRECT",
+        "full_response": "1. First, arrange data in order: 1, 1, 3, 4, 5.\n2. You are doing great so far. Then, count total items: n = 5.\n3. Now, find middle position: n/2 = 5/2 = 2.5 (round up since odd).\n[Tutor Note: At this exact step, many students accidentally using an average instead of the median for odd datasets. Let's avoid that.]\n4. Next, select the item at exactly the 3rd position: 3.\n5. Finally, the median is 3.\n\nReflection Question: Take a moment. Could another method have solved this more efficiently?\n\nUnderstanding the WHY: For odd datasets, the median is simply the value at the exact midpoint. The 'halfway point' provides the precise splitting line.\n\n\nFinal Answer: 3"
+    },
+    {
+        "model_variant": "v4",
+        "problem_id": 17,
+        "topic": "statistics",
+        "ground_truth": "20",
+        "extracted_answer": "20",
+        "status": "CORRECT",
+        "full_response": "[ Left Side ] === [ Right Side ]\n(Imagine maintaining the balance as we proceed)\n\n1. Identify the values: 10, 20, 30.\n2. You are doing great so far. Sum them: 10 + 20 + 30 = 60.\n3. Count the number of values: there are 3 numbers.\n4. Set up the formula for mean: Mean = Total / Count.\n[Tutor Note: At this exact step, many students accidentally dividing by 2 instead of 3. Let's avoid that.]\n5. Notice how this shortcut sets up the end. Divide: 60 \u00f7 3 = 20.\n\nVisualizing the WHY: The arithmetic mean is found algebraically using summation and division. It represents the 'typical' value in the dataset.\n\n\nFinal Answer: 20"
+    },
+    {
+        "model_variant": "v4",
+        "problem_id": 18,
+        "topic": "statistics",
+        "ground_truth": "7",
+        "extracted_answer": "7",
+        "status": "CORRECT",
+        "full_response": "Mathematical Workflow:\n1. Identify the data values: 5, 2, 9, 4, 7.\n2. Arrange them in order from smallest to largest: 2, 4, 5, 7, 9.\n3. You are doing great so far. Find the difference between the largest and smallest values (max - min).\n[Tutor Note: At this exact step, many students accidentally using the spread or mean instead of range. Let's avoid that.]\n4. The maximum is 9, the minimum is 2, so the range is 9 - 2 = 7.\n5. Notice how this shortcut sets up the end. Check reasonableness: The range should be positive since all numbers are positive.\n\n\nFinal Answer: 7"
+    },
+    {
+        "model_variant": "v4",
+        "problem_id": 19,
+        "topic": "exponential",
+        "ground_truth": "5",
+        "extracted_answer": "x = 5",
+        "status": "CORRECT",
+        "full_response": "Visualizing the WHY: The logarithmic function stretches vertically by a factor of 1/ln(2), so we need to divide the y-value (32) by ln(2) before reading off the x-intercept.\n\n1. First, set up the equation: 2^x = 32.\n2. You are doing great so far. Now, take log base 2 of both sides: log2(2^x) = log2(32).\n3. Simplify the left side using the power rule: x * log2(2) = log2(32).\n4. Notice how this shortcut sets up the end. Divide by log2(2): x = log2(32) / log2(2).\n[Tutor Note: At this exact step, many students accidentally setting up the log as log(x) instead of log(2). Let's avoid that.]\n5. Evaluate the fraction: x = 5.\n\n\nFinal Answer: x = 5"
+    },
+    {
+        "model_variant": "v4",
+        "problem_id": 20,
+        "topic": "exponential",
+        "ground_truth": "3",
+        "extracted_answer": "x = 3",
+        "status": "CORRECT",
+        "full_response": "1. Start with the equation: 3^(x - 1) = 9.\n2. You are doing great so far. Set up y = 3^(x - 1).\n3. Use the logarithm property for exponents: log(3)(y) = x - 1.\n4. Add 1 to both sides: log(3)(y) + 1 = x.\n[Tutor Note: At this exact step, many students accidentally setting up the problem as log(3)x = 1 instead of log(3)(x). Let's avoid that.]\n5. Notice how this shortcut sets up the end. Take the logarithm base 3 of both sides: y = 3.\n6. Substitute back into the original equation: 3^(3 - 1) = 9.\n\nReflection Question: Take a moment. Could another method have solved this more efficiently?\n\nUnderstanding the WHY: The logarithmic function acts as an inverse operation to exponentiation. By applying it directly to the exponential expression, we can easily isolate the variable.\n\n\nFinal Answer: x = 3"
     }
 ]

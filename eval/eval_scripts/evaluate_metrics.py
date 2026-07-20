@@ -52,6 +52,7 @@ BASE_MODEL_ID   = "meta-llama/Meta-Llama-3-8B-Instruct"
 ADAPTER_V1_PATH = os.path.join(PROJECT_ROOT, "llama3-math-tutor-adapter")
 ADAPTER_V2_PATH = os.path.join(PROJECT_ROOT, "llama3-math-tutor-adapter-v2")
 ADAPTER_V3_PATH = os.path.join(PROJECT_ROOT, "llama3-math-tutor-adapter-v3")
+ADAPTER_V4_PATH = os.path.join(PROJECT_ROOT, "llama3-math-tutor-adapter-v4")
 
 
 # ---------------------------------------------------------------------------
@@ -251,6 +252,37 @@ def generate_pdf_report(summary_metrics, pdf_path, training_metrics=None):
     elements.append(t_sum)
     elements.append(Spacer(1, 20))
 
+    # ── Epochs vs Accuracy Correlation Table ────────────────────────────────
+    if training_metrics:
+        elements.append(Paragraph("<b>Epoch vs Accuracy Correlation</b>", heading2))
+        corr_data = [["Model", "Epochs Trained", "Math Accuracy (%)", "Unparseable Count"]]
+        for row in summary_metrics:
+            v = row["model_name"]
+            epochs_str = "N/A (Base)"
+            if v in training_metrics:
+                epochs_str = str(round(training_metrics[v].get("epoch", 0), 2))
+                
+            corr_data.append([
+                str(v),
+                epochs_str,
+                f"{row['overall_accuracy_%']}%",
+                str(row["unparseable_count"])
+            ])
+
+        t_corr = Table(corr_data, colWidths=[90, 110, 120, 120])
+        t_corr.setStyle(TableStyle([
+            ("BACKGROUND",    (0, 0), (-1, 0),  colors.HexColor("#4a4e69")),
+            ("TEXTCOLOR",     (0, 0), (-1, 0),  colors.whitesmoke),
+            ("ALIGN",         (0, 0), (-1, -1), "CENTER"),
+            ("FONTNAME",      (0, 0), (-1, 0),  "Helvetica-Bold"),
+            ("FONTSIZE",      (0, 0), (-1, 0),  10),
+            ("BOTTOMPADDING", (0, 0), (-1, 0),  8),
+            ("BACKGROUND",    (0, 1), (-1, -1), colors.HexColor("#f2e9e4")),
+            ("GRID",          (0, 0), (-1, -1), 0.8, colors.black),
+        ]))
+        elements.append(t_corr)
+        elements.append(Spacer(1, 24))
+
     # ── Per-Topic Accuracy Table ────────────────────────────────────────────
     elements.append(Paragraph("<b>Per-Topic Accuracy Breakdown (%)</b>", heading2))
     topics = [
@@ -388,6 +420,7 @@ def main():
         "v1": ADAPTER_V1_PATH,
         "v2": ADAPTER_V2_PATH,
         "v3": ADAPTER_V3_PATH,
+        "v4": ADAPTER_V4_PATH,
     }
     for v_name, v_path in adapter_paths.items():
         if os.path.isdir(v_path):
