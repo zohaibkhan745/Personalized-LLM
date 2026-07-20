@@ -51,6 +51,7 @@ PDF_PATH       = os.path.join(RESULTS_DIR, "evaluation_report.pdf")
 BASE_MODEL_ID   = "meta-llama/Meta-Llama-3-8B-Instruct"
 ADAPTER_V1_PATH = os.path.join(PROJECT_ROOT, "llama3-math-tutor-adapter")
 ADAPTER_V2_PATH = os.path.join(PROJECT_ROOT, "llama3-math-tutor-adapter-v2")
+ADAPTER_V3_PATH = os.path.join(PROJECT_ROOT, "llama3-math-tutor-adapter-v3")
 
 
 # ---------------------------------------------------------------------------
@@ -172,7 +173,7 @@ def generate_response(model, tokenizer, prompt_messages):
 # ---------------------------------------------------------------------------
 # PDF report
 # ---------------------------------------------------------------------------
-def generate_pdf_report(summary_metrics, pdf_path):
+def generate_pdf_report(summary_metrics, pdf_path, training_metrics=None):
     os.makedirs(os.path.dirname(pdf_path), exist_ok=True)
     doc = SimpleDocTemplate(pdf_path, pagesize=letter,
                             leftMargin=0.75*inch, rightMargin=0.75*inch,
@@ -195,6 +196,36 @@ def generate_pdf_report(summary_metrics, pdf_path):
     elements.append(Spacer(1, 16))
     elements.append(HRFlowable(width="100%", thickness=1, color=colors.black))
     elements.append(Spacer(1, 10))
+
+    # ── Training Telemetry Table (If Available) ─────────────────────────────
+    if training_metrics:
+        elements.append(Paragraph("<b>Training Telemetry (Loss & Meta)</b>", heading2))
+        train_data = [["Model", "Eval Loss", "Epochs", "Mean Token Acc %"]]
+        for v in [m["model_name"] for m in summary_metrics]:
+            if v == "base":
+                train_data.append(["base", "N/A (Base)", "N/A", "N/A"])
+            elif v in training_metrics:
+                tm = training_metrics[v]
+                loss = round(tm.get("eval_loss", 0), 4)
+                epochs = tm.get("epoch", "N/A")
+                acc = round(tm.get("eval_mean_token_accuracy", 0) * 100, 2)
+                train_data.append([str(v), str(loss), str(epochs), f"{acc}%"])
+            else:
+                train_data.append([str(v), "Missing Details", "Missing", "Missing"])
+
+        t_train = Table(train_data, colWidths=[90, 100, 90, 120])
+        t_train.setStyle(TableStyle([
+            ("BACKGROUND",    (0, 0), (-1, 0),  colors.HexColor("#2a9d8f")),
+            ("TEXTCOLOR",     (0, 0), (-1, 0),  colors.whitesmoke),
+            ("ALIGN",         (0, 0), (-1, -1), "CENTER"),
+            ("FONTNAME",      (0, 0), (-1, 0),  "Helvetica-Bold"),
+            ("FONTSIZE",      (0, 0), (-1, 0),  11),
+            ("BOTTOMPADDING", (0, 0), (-1, 0),  10),
+            ("BACKGROUND",    (0, 1), (-1, -1), colors.HexColor("#f3f3f3")),
+            ("GRID",          (0, 0), (-1, -1), 0.8, colors.black),
+        ]))
+        elements.append(t_train)
+        elements.append(Spacer(1, 20))
 
     # ── Overall Summary Table ───────────────────────────────────────────────
     elements.append(Paragraph("<b>Overall Summary</b>", heading2))
@@ -353,16 +384,30 @@ def main():
 
     # ── Discover which variants to test ────────────────────────────────────
     variants = ["base"]
-    if os.path.isdir(ADAPTER_V1_PATH):
-        variants.append("v1")
-    else:
-        print(f"[NOTE] v1 adapter not found at {ADAPTER_V1_PATH} — skipping.")
-    if os.path.isdir(ADAPTER_V2_PATH):
-        variants.append("v2")
-    else:
-        print(f"[NOTE] v2 adapter not found at {ADAPTER_V2_PATH} — skipping.")
+    adapter_paths = {
+        "v1": ADAPTER_V1_PATH,
+        "v2": ADAPTER_V2_PATH,
+        "v3": ADAPTER_V3_PATH,
+    }
+    for v_name, v_path in adapter_paths.items():
+        if os.path.isdir(v_path):
+            variants.append(v_name)
+        else:
+            print(f"[NOTE] {v_name} adapter not found at {v_path} — skipping.")
 
     print(f"\nVariants to evaluate: {variants}")
+
+    # ── Load training telemetry ──────────────────────────────────────────
+    training_metrics = {}
+    for v_name in variants:
+        if v_name == "base": continue
+        results_json = os.path.join(adapter_paths[v_name], "training_results.json")
+        if os.path.isfile(results_json):
+            try:
+                with open(results_json, "r") as f:
+                    training_metrics[v_name] = json.load(f)
+            except Exception as e:
+                print(f"[WARNING] Could not read training metrics for {v_name}: {e}")
 
     # ── Load base model once ────────────────────────────────────────────────
     print("\nLoading 4-bit quantization config...")
@@ -391,15 +436,14 @@ def main():
 
     if adapter_names:
         first = adapter_names[0]
-        first_path = ADAPTER_V1_PATH if first == "v1" else ADAPTER_V2_PATH
+        first_path = adapter_paths[first]
         print(f"Initialising PeftModel with adapter '{first}' from {first_path} ...")
         model = PeftModel.from_pretrained(base_model, first_path, adapter_name=first)
 
-        if len(adapter_names) > 1:
-            second = adapter_names[1]
-            second_path = ADAPTER_V2_PATH if second == "v2" else ADAPTER_V1_PATH
-            print(f"Loading adapter '{second}' from {second_path} ...")
-            model.load_adapter(second_path, adapter_name=second)
+        for other in adapter_names[1:]:
+            other_path = adapter_paths[other]
+            print(f"Loading adapter '{other}' from {other_path} ...")
+            model.load_adapter(other_path, adapter_name=other)
 
     model.eval()
     test_suite = get_test_set()
@@ -534,7 +578,7 @@ def main():
 
     print(f"Generating PDF report → {PDF_PATH}")
     if summary_metrics:
-        generate_pdf_report(summary_metrics, PDF_PATH)
+        generate_pdf_report(summary_metrics, PDF_PATH, training_metrics)
 
     # ── Final console comparison table ─────────────────────────────────────
     topics = [

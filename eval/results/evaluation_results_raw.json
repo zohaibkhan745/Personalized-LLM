@@ -538,5 +538,185 @@
         "extracted_answer": "1",
         "status": "INCORRECT",
         "full_response": "Let's break this down step by step.\n\nStep 1: Write the equation in exponential form.\n3^x * (1/3) = 1\n\nStep 2: Simplify the left side.\n3^x / 3 = 1\n\nStep 3: Cancel out the common factor of 3.\n3^(x-1) = 1\n\nStep 4: Solve for x.\nx - 1 = 0\nx = 1"
+    },
+    {
+        "model_variant": "v3",
+        "problem_id": 1,
+        "topic": "linear_equations",
+        "ground_truth": "5",
+        "extracted_answer": "x = 5",
+        "status": "CORRECT",
+        "full_response": "Visualizing the WHY: The Subtraction Inverse Method is a reliable method for solving equations with constants. It isolates the variable by adding the constant term to both sides, then dividing by the coefficient.\n\n[ Left Side ] === [ Right Side ]\n(Imagine maintaining the balance as we proceed)\n\n1. Start with the equation: 5x - 4 = 21.\n2. Add 4 to both sides to clear the negative term: 5x = 21 + 4.\n3. Combine the constants on the right side: 5x = 25.\n[Tutor Note: At this exact step, many students accidentally forgetting to add 4 to both sides. Let's avoid that.]\n4. Notice how this shortcut sets up the end. Divide both sides by 5: x = 25 / 5.\n5. Simplify the division: x = 5.\n\n\nFinal Answer: x = 5"
+    },
+    {
+        "model_variant": "v3",
+        "problem_id": 2,
+        "topic": "linear_equations",
+        "ground_truth": "6",
+        "extracted_answer": "x = 6",
+        "status": "CORRECT",
+        "full_response": "Properties and Invariants: The 'Substitution Method' method is efficient for complex equations with variables on both sides.\nThe 'Distributive Property' helps to isolate the variable.\n\n1. Start with the equation: 3(x - 2) = 12\n2. Distribute the 3 to the terms inside the parentheses: 3x - 6 = 12\n3. Add 6 to both sides to get rid of the negative term: 3x = 18\n[Tutor Note: At this exact step, many students accidentally multiplying both sides by 3 instead of adding 6. Let's avoid that.]\n4. Notice how this shortcut sets up the end. Divide both sides by 3: x = 6\n\nFinal Answer: x = 6"
+    },
+    {
+        "model_variant": "v3",
+        "problem_id": 3,
+        "topic": "linear_equations",
+        "ground_truth": "no solution",
+        "extracted_answer": "All real numbers",
+        "status": "INCORRECT",
+        "full_response": "The core 'Why': If two equations have the same slope and y-intercept, they must be identical.\n\n1. First, Graph both equations on separate axes.\n2. You are doing great so far. Then, Notice how quickly this shortcut sets up the end.\n3. Now, Observe visually: if one crosses another line exactly at its starting point (origin), they must be identical.\n[Tutor Note: At this exact step, many students accidentally graphing the wrong equation or miscalculating intercepts. Let's avoid that.]\n4. Next, Check algebraically: substitute any value into either equation. For example, y=0 when x=0.\n5. Finally, Conclude because the graphs intersect at the origin, the original equation is an identity and true for all real numbers.\n\nReflection Question: Take a moment. Could another method have solved this more efficiently?\n\n\nFinal Answer: All real numbers"
+    },
+    {
+        "model_variant": "v3",
+        "problem_id": 4,
+        "topic": "quadratic_factoring",
+        "ground_truth": "(x - 3)*(x + 3)",
+        "extracted_answer": "(x - 3)(x + 3)",
+        "status": "CORRECT",
+        "full_response": "1. First, Write the binomial as a square of a trinomial.\n2. You are doing great so far. Then, Identify dimensions for the square: (x + _) \u00d7 (x _).\n3. Next, Find perfect squares within x\u00b2 and -9.\n[Tutor Note: At this exact step, many students accidentally forgetting one half. Let's avoid that.]\n4. Now, Notice how this shortcut sets up the end. Then, Recognize x\u00b2 is already a perfect square.\n5. Finally, Dimensions cannot be negative, so no sign change needed.\n\nReflection Question: Take a moment. Could another method have solved this more efficiently?\n\nUnderstanding the WHY: The 'square root' method guarantees symmetry in the factored form. By finding perfect squares within the terms, we ensure the signs match.\n\n\nFinal Answer: (x - 3)(x + 3)"
+    },
+    {
+        "model_variant": "v3",
+        "problem_id": 5,
+        "topic": "quadratic_factoring",
+        "ground_truth": "(x + 2)*(x + 5)",
+        "extracted_answer": "(x + 2)(x + 5)",
+        "status": "CORRECT",
+        "full_response": "Visualizing the WHY: The Box Method is a visual method for factoring quadratic expressions into binomials. It works by creating a box with the terms on the sides and the GCF in the top row.\n\n1. First, write the trinomial in standard form: x\u00b2 + 7x + 10.\n2. You are doing great so far. Next, draw a large rectangle with two rows and two columns.\n3. Then, place the first term (x\u00b2) in the top-left corner of the box.\n4. Now, place the middle coefficient (+7x) in the second column.\n[Tutor Note: At this exact step, many students accidentally placing the constant incorrectly. Let's avoid that.]\n5. Notice how this shortcut sets up the end. Now, place the last term (+10) in the bottom-right corner of the box.\n6. Finally, find the greatest common factor (GCF) of the side numbers (x) and the bottom number (10).\n7. Factor out the GCF from all four numbers: (x + 5)(x + 2).\n\nThe core 'Why': By isolating the variables within the box, we can easily identify the greatest common factor that divides evenly across both rows and columns.\n\n\nFinal Answer: (x + 2)(x + 5)"
+    },
+    {
+        "model_variant": "v3",
+        "problem_id": 6,
+        "topic": "quadratic_factoring",
+        "ground_truth": "2*x*(x + 2)",
+        "extracted_answer": "2x(x + 2)",
+        "status": "CORRECT",
+        "full_response": "Properties and Invariants: The GCF of the terms is 2x, which can be pulled out as a common factor.\n\nMathematical Workflow:\n1. Identify the greatest common factor (GCF) of the two terms.\n2. Pull out the GCF from both terms.\n3. Notice how this shortcut sets up the end. Simplify.\n[Tutor Note: At this exact step, many students accidentally pulling out x instead of 2x. Let's avoid that.]\n4. Check for symmetry by verifying the remaining factors are prime or irreducible.\n5. Write final answer: 2x(x + 2).\n\nProperties and Invariants: By factoring out the largest possible constant first, we guarantee the remaining binomial will be simple.\n\n\nFinal Answer: 2x(x + 2)"
+    },
+    {
+        "model_variant": "v3",
+        "problem_id": 7,
+        "topic": "ratios",
+        "ground_truth": "12",
+        "extracted_answer": "12 cups of sugar",
+        "status": "INCORRECT",
+        "full_response": "The core 'Why': The ratio of flour to sugar is 2:3. To find the matching ratio for 8 cups flour, multiply both parts by 4.\n\n1. First, identify the given ratio: Flour : Sugar = 2 : 3.\n2. You are doing great so far. Then, set up the new ratio using 8 cups flour.\n3. Now, multiply the original ratio by 4 to match the larger flour quantity.\n[Tutor Note: At this exact step, many students accidentally multiplying 2 and 3 by 4 instead of keeping them together as a block. Let's avoid that.]\n4. Finally, evaluate the new ratio: 8 : 12.\n\nConcept Idea: Scaling ratios requires multiplying both numbers in the proportion by the same factor.\n\n\nFinal Answer: 12 cups of sugar"
+    },
+    {
+        "model_variant": "v3",
+        "problem_id": 8,
+        "topic": "ratios",
+        "ground_truth": "250",
+        "extracted_answer": "250 miles",
+        "status": "INCORRECT",
+        "full_response": "1. First, write the given information as an equation: 150 / 3 = x / 5.\n2. You are doing great so far. Then, cross-multiply: 150 * 5 = 3x.\n3. Now, multiply: 750 = 3x.\n[Tutor Note: At this exact step, many students accidentally dividing 150 by 3 instead of multiplying. Let's avoid that.]\n4. Next, divide by 3: x = 250.\n5. Finally, answer: 250 miles.\n\nReflection Question: Take a moment. Could another method have solved this more efficiently?\n\nUnderstanding the WHY: Algebraic methods provide a systematic and reliable way to solve proportion problems. Cross-multiplication ensures the numbers cancel out correctly.\n\n\nFinal Answer: 250 miles"
+    },
+    {
+        "model_variant": "v3",
+        "problem_id": 9,
+        "topic": "ratios",
+        "ground_truth": "8",
+        "extracted_answer": "5 days",
+        "status": "INCORRECT",
+        "full_response": "Visualizing the WHY: This is a classic proportion problem. By setting up the ratio of time to painters, we can easily find the new time needed for the different number of painters.\n\n[ Left Side ] === [ Right Side ]\n(4 Painters \u00d7 10 Days) === (5 Painters \u00d7 x Days)\n\n1. First, identify the given information: 4 painters painting for 10 days.\n2. You are doing great so far. Then, set up a basic proportion with the known variables.\n3. Now, cross-multiply: 4x = 20 * 5.\n[Tutor Note: At this exact step, many students accidentally setting up the proportion as (x/4) = 10/5. Let's avoid that.]\n4. Next, solve for x: x = 20 / 4.\n5. Finally, simplify and write the answer: 5 days.\n\n\nFinal Answer: 5 days"
+    },
+    {
+        "model_variant": "v3",
+        "problem_id": 10,
+        "topic": "systems",
+        "ground_truth": "5",
+        "extracted_answer": "x = 5, y = 10",
+        "status": "INCORRECT",
+        "full_response": "Properties and Invariants: The system is linear, and the variables are isolated on opposite sides.\n\nMathematical Workflow:\n1. Start with the system: y = 2x and x + y = 15.\n2. Solve the first equation for y: y = 2x.\n3. Substitute this into the second equation: x + (2x) = 15.\n4. Combine like terms: 3x = 15.\n[Tutor Note: At this exact step, many students accidentally substituting y into the wrong equation. Let's avoid that.]\n5. Notice how this shortcut sets up the end. Divide by 3: x = 5.\n6. Back-substitute to find y: y = 2(5) = 10.\nKey Ideas to connect: Substitution method, Isolation of variables\n\n\nFinal Answer: x = 5, y = 10"
+    },
+    {
+        "model_variant": "v3",
+        "problem_id": 11,
+        "topic": "systems",
+        "ground_truth": "3",
+        "extracted_answer": "x = 3, y = 1",
+        "status": "INCORRECT",
+        "full_response": "The core 'Why': The system is already solved, so we just need to read the values from the graph. The point of intersection represents where both lines cross.\n\n1. First, plot the first equation: y = x - 2.\n2. You are doing great so far. Then, plot the second equation: y = (13 - 2x) / 2.\n3. Next, find the intersection by finding the y-value for a given x value in both equations.\n[Tutor Note: At this exact step, many students accidentally plotting the wrong line or failing to scale correctly. Let's avoid that.]\n4. Now, set up the coordinates for the first equation: (0, -2), (1, 1), (2, 2).\n5. Next, set up the coordinates for the second equation: (0, 7), (1, 5.5), (2, 3.5).\n6. Finally, find where they intersect: at approximately (3, 1).\n\nVisualizing the WHY: Graphing allows us to visualize the solution algebraically. Where two lines meet, their y-values match exactly.\n\n\nFinal Answer: x = 3, y = 1"
+    },
+    {
+        "model_variant": "v3",
+        "problem_id": 12,
+        "topic": "systems",
+        "ground_truth": "2",
+        "extracted_answer": "x = 2, y = 3",
+        "status": "INCORRECT",
+        "full_response": "Reflection Question: Before starting, take a deep breath. What operation(s) will need to be performed?\n\n1. First, write the system of equations: 3x + 2y = 12 and y = x + 1.\n2. You are doing great so far. Then, substitute y = x + 1 into the first equation: 3x + 2(x + 1) = 12.\n3. Now, distribute the 2: 3x + 2x + 2 = 12.\n4. Next, combine like terms: 5x + 2 = 12.\n[Tutor Note: At this exact step, many students accidentally forgetting to distribute the coefficient when substituting. Let's avoid that.]\n5. Then, subtract 2 from both sides: 5x = 10.\n6. Finally, divide by 5: x = 2.\n\nReflection Question: After completing the problem, what was that process exactly?\n\n\nFinal Answer: x = 2, y = 3"
+    },
+    {
+        "model_variant": "v3",
+        "problem_id": 13,
+        "topic": "probability",
+        "ground_truth": "1/2",
+        "extracted_answer": "1/12",
+        "status": "INCORRECT",
+        "full_response": "Visualizing the WHY: To find the total number of outcomes, we list all possible rolls (1-6). To find the favorable outcomes, we identify the prime numbers on the die (2, 3, 5). The ratio of favorables to total outcomes gives the probability.\n\n[ Left Side ] === [ Right Side ]\n(Imagine maintaining balance as we proceed)\n\n1. List all 36 equally likely outcomes: 1, 1 to 6, 6.\n2. Identify the prime numbers on the die: 2, 3, and 5.\n3. Count the frequency of primes: there are 3.\n4. Total outcomes: 36.\n[Tutor Note: At this exact step, many students accidentally missing one of the prime numbers. Let's avoid that.]\n5. Notice how this shortcut sets up the end. Calculate the ratio: 3/36 = 1/12.\n6. Simplify the fraction to 1/12.\n\n\nFinal Answer: 1/12"
+    },
+    {
+        "model_variant": "v3",
+        "problem_id": 14,
+        "topic": "probability",
+        "ground_truth": "2/5",
+        "extracted_answer": "2/3",
+        "status": "INCORRECT",
+        "full_response": "Properties and Invariants: The total number of favorable outcomes (blue) divides exactly into the total number of possible outcomes (total events).\n\nMathematical Workflow:\n1. Identify total events (n = 5).\n2. Identify favorable outcomes (blue marbles = 2).\n3. Divide the number of blues by the total.\n[Tutor Note: At this exact step, many students accidentally dividing 2 by 3 instead of 3 by 2. Let's avoid that.]\n4. Notice how this shortcut sets up the end. Factor out the common factor of 2 from both numerator and denominator.\n5. Simplify to 2/3.\n\nFinal Answer: 2/3"
+    },
+    {
+        "model_variant": "v3",
+        "problem_id": 15,
+        "topic": "probability",
+        "ground_truth": "1/8",
+        "extracted_answer": "1/8",
+        "status": "CORRECT",
+        "full_response": "The core 'Why': To find the probability of a specific outcome, divide the number of ways it occurs by the total number of possible outcomes.\n\n1. First, determine the total number of possible outcomes when flipping a fair coin 3 times: 2 \u00d7 2 \u00d7 2 = 8.\n2. You are doing great so far. Now, count the number of ways to get all heads: HHH, HHH, HHH.\n3. Then, divide the successful outcome count (1) by the total outcome count (8).\n[Tutor Note: At this exact step, many students accidentally counting HHHT or HTTH as successful outcomes. Let's avoid that.]\n4. Next, simplify the fraction if necessary.\n5. Finally, verify the final answer makes sense in context: 1/8 means it's extremely unlikely but not impossible.\n\n\nFinal Answer: 1/8"
+    },
+    {
+        "model_variant": "v3",
+        "problem_id": 16,
+        "topic": "statistics",
+        "ground_truth": "3",
+        "extracted_answer": "Median = 3",
+        "status": "CORRECT",
+        "full_response": "The final outcome will be 3. Let's prove why.\n\n1. First, arrange the data in order from smallest to largest: 1, 1, 3, 4, 5.\n2. You are doing great so far. Then, identify the middle two numbers because there is an odd number of values (5).\n3. Next, the second central value is the third item, which is 3.\n[Tutor Note: At this exact step, many students accidentally confusing the median with the mode or mean. Let's avoid that.]\n4. Now, recall that when there are an odd number of values, the median is exactly one specific value.\n5. Finally, state the answer: Median = 3.\n\nReflection Question: Take a moment. Could another method have solved this more efficiently?\n\n\nFinal Answer: Median = 3"
+    },
+    {
+        "model_variant": "v3",
+        "problem_id": 17,
+        "topic": "statistics",
+        "ground_truth": "20",
+        "extracted_answer": "20",
+        "status": "CORRECT",
+        "full_response": "Visualizing the WHY: The Mean is the balance point for a set of numbers. Imagine all numbers stacked on top of each other. The Mean is where you'd place a fulcrum so everything balances evenly.\n\n1. First, list the data in order: 10, 20, 30.\n2. You are doing great so far. Then, calculate the total sum: 10 + 20 + 30 = 60.\n3. Next, count how many values there are: 3 total.\n4. Now, divide the total by the number of values: 60 \u00f7 3 = 20.\n[Tutor Note: At this exact step, many students accidentally dividing by 2 instead of the total number of values. Let's avoid that.]\n5. Finally, state the final answer: 20.\n\n\nFinal Answer: 20"
+    },
+    {
+        "model_variant": "v3",
+        "problem_id": 18,
+        "topic": "statistics",
+        "ground_truth": "7",
+        "extracted_answer": "7",
+        "status": "CORRECT",
+        "full_response": "Properties and Invariants: The Range is the difference between the largest and smallest values.\n\nMathematical Workflow:\n1. First, identify the given data: 5, 2, 9, 4, 7.\n2. You are doing great so far. Then, find the minimum value (smallest): 2.\n3. Next, find the maximum value (largest): 9.\n[Tutor Note: At this exact step, many students accidentally using decimals or averages instead of integers. Let's avoid that.]\n4. Now, subtract the smallest from the largest: 9 - 2 = 7.\n5. Finally, state the answer: The Range is 7 units.\n\n\nFinal Answer: 7"
+    },
+    {
+        "model_variant": "v3",
+        "problem_id": 19,
+        "topic": "exponential",
+        "ground_truth": "5",
+        "extracted_answer": "x = 5",
+        "status": "CORRECT",
+        "full_response": "The core 'Why': Exponential growth is incredibly rapid, so even small changes in the exponent can result in massive differences in outcome.\n\n1. First, recall exponential growth doubles the value for every 1-unit increase in the exponent.\n2. You are doing great so far. Then, start with 2^x = 32.\n3. Next, identify the base (2) and the power (x).\n4. Now, find the largest power of 2 less than or equal to 5: 2^0 = 1, 2^1 = 2, 2^2 = 4, 2^3 = 8, 2^4 = 16, 2^5 = 32.\n[Tutor Note: At this exact step, many students accidentally guessing an irrational number like 3.5. Let's avoid that.]\n5. Now, notice how this shortcut sets up the end. Notice how this shortcut sets up the end. Then, since 2^4 = 16 < 32 and 2^5 = 32 > 32 is not possible, x must be exactly 5.\n6. Finally, write final answer: x = 5.\n\n\nFinal Answer: x = 5"
+    },
+    {
+        "model_variant": "v3",
+        "problem_id": 20,
+        "topic": "exponential",
+        "ground_truth": "3",
+        "extracted_answer": "x = 3",
+        "status": "CORRECT",
+        "full_response": "Reflection Question: Before starting, take a quick mental note about the rules of exponents. When bases are equal, powers must be equal.\n\n1. Start with the equation: 3^(x-1) = 9.\n2. Notice how this shortcut sets up the end. First, identify the base (3).\n3. You are doing great so far. Then, identify the left side as exponential and right side as constant.\n4. Now, equate the powers directly: (x - 1) = 2.\n[Tutor Note: At this exact step, many students accidentally thinking they need to subtract 1 from 2 to get x. Let's avoid that.]\n5. Finally, solve for x: x = 3.\n\nReflection Question: After completing the problem, think back: Did using the matching power rule simplify the solution?\n\n\nFinal Answer: x = 3"
     }
 ]

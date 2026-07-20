@@ -5,7 +5,7 @@ __pycache__/
 # Weights
 llama3-math-tutor-adapter/
 llama3-math-tutor-adapter-v2/
-
+llama3-math-tutor-adapter-v3/
 # Data
 # Excluding all generated data initially except tracked
 data/generated/
